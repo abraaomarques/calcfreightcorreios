@@ -1,0 +1,19 @@
+<?php
+    /** @var \AbraaoMarques\Correios\Block\ProductPage $block */
+    $product = $block->getProduct();
+?>
+
+<div class="fieldset">
+    <label for="zipcode" class="label custom_label">Informe seu CEP</label>
+    <div class="control">
+        <input type="text" id="zipcode" name="zipcode" class="input-text" placeholder="12345-789" maxlength="9"/>
+        <input type="hidden" name="product_sku" id="product_sku" value="<?= $product->getSku();?>">
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "AbraaoMarques_Correios/js/input": {}
+        }
+    }
+</script>

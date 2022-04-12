@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="AbraaoMarques_Correios::css/input.css"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.form.content">
+            <block class="AbraaoMarques\Correios\Block\ProductPage"
+                   name="abraaomarques.correios.form.quotation"
+                   template="AbraaoMarques_Correios::productpage/quotation.phtml"
+                   after="product.info.addtocart"
+            />
+        </referenceBlock>
+    </body>
+</page>

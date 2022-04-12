@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>AbraaoMarques_Correios::correios_resource</resource>
+            <group id="abraaomarques_correios" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Abraao Marques Correios</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Method Title</label>
+                </field>
+                <field id="posting_methods" translate="label" type="multiselect" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Posting Methods</label>
+                    <source_model>AbraaoMarques\Correios\Model\Config\Source\PostingMethods</source_model>
+                </field>
+                <field id="posting_freemethod" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free Method</label>
+                    <source_model>AbraaoMarques\Correios\Model\Config\Source\PostingMethods</source_model>
+                </field>
+                <field id="login" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Correios Contract Number</label>
+                </field>
+                <field id="password" translate="label" type="password" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Correios Contract Password</label>
+                </field>
+                <field id="owner_hands" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use Owner Hands</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="received_warning" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Received Warning</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="declared_value" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Use Declared Value</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="default_height" translate="label comment" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Default Height</label>
+                    <comment>If not specified will be used 2cm</comment>
+                </field>
+                <field id="default_width" translate="label comment" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Default Width</label>
+                    <comment>If not specified will be used 16cm</comment>
+                </field>
+                <field id="default_depth" translate="label comment" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Default Depth</label>
+                    <comment>If not specified will be used 11cm</comment>
+                </field>
+                <field id="handling_fee" translate="label comment" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Handling Fee</label>
+                    <comment>This value will be increased in the shipping value.</comment>
+                </field>
+                <field id="show_deliverydays" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Show Delivery Days</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="add_deliverydays" translate="label comment" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Add Delivery Days</label>
+                    <comment>Add more days in the shipping days expected.</comment>
+                </field>
+                <field id="deliverydays_message" translate="label comment" type="text" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Delivery Days Message</label>
+                    <comment>Here you can customize the shipping message. An example is: '%s - %d days to receive.'. %s is the shipping method and %d is the days number.</comment>
+                </field>
+                <field id="freeshipping_message" translate="label comment" type="text" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Free Shipping Message</label>
+                    <comment>This message will be add in the free shipping method when applicable.</comment>
+                </field>
+                <field id="webservice_url" translate="label comment" type="text" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Correios WebService Url</label>
+                    <comment>Default is http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?StrRetorno=xml</comment>
+                </field>
+                <field id="max_weight" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Max Weight</label>
+                </field>
+                <field id="enabled_log" translate="label" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable logs?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
