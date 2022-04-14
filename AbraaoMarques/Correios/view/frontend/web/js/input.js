@@ -5,10 +5,10 @@ define([
     'use strict'
 
      $.widget('correios.jqueryMask', {
-            _create: function () {
-                $('input[name="zipcode"]').mask('00000-000');
-            },
-        });
+        _create: function () {
+            $('input[name="zipcode"]').mask('00000-000');
+        },
+    });
 
-        return $.correios.jqueryMask;
+    return $.correios.jqueryMask;
 })
